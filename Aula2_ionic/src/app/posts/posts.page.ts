@@ -33,7 +33,7 @@ export class PostsPage implements OnInit {
 
       // App logic to determine if all data is loaded
       // and disable the infinite scroll
-      if (this.Postspage.length == 1000) {
+      if (this.Postspage.length == this.postsArr.length) {
         event.target.disabled = true;
       }
     }, 500);
