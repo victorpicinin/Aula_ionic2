@@ -10,12 +10,10 @@
 <ion-content>
 <ion-grid *ngFor="let posts of Postspage">
   <ion-card-header>
-    
+  
     <ion-card-title><ion-row><b>{{posts.title}}</b></ion-row></ion-card-title>
     <ion-card-content><ion-row>{{posts.body}}</ion-row></ion-card-content>
   </ion-card-header>
-  
-  
 
 </ion-grid>
 <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
@@ -24,5 +22,7 @@
     loadingText="Loading more data...">
   </ion-infinite-scroll-content>
 </ion-infinite-scroll>
+<ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+
 </ion-content>
 
